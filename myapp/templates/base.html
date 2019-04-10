@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'favicon/favicon.png' %}" type="image/png">
+    <link rel="icon" sizes="32x32" href="{% static 'favicon/favicon-32.png' %}" type="image/png">
+    <link rel="icon" sizes="64x64" href="{% static 'favicon/favicon-64.png' %}" type="image/png">
+    <link rel="icon" sizes="96x96" href="{% static 'favicon/favicon-96.png' %}" type="image/png">
+    <link rel="icon" sizes="196x196" href="{% static 'favicon/favicon-196.png' %}" type="image/png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'favicon/apple-touch-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'favicon/apple-touch-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'favicon/apple-touch-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'favicon/apple-touch-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'favicon/apple-touch-icon-144x144.png' %}">
+    <meta name="msapplication-TileImage" content="favicon-144.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Félix Maillet</title>
+  </head>
+  <body>
+    <div id="menu">
+      <div class="left__menu">
+        <div class="menu__link">
+          <ul>
+            <li>PYTHON/WEB</li>
+            <li>DRONE</li>
+            <li>ANIMATION</li>
+          </ul>
+        </div>
+      </div>
+      <div class="right__menu">
+        <div class="contact__link">
+          <p>felixmaillet@yahoo.fr</p>
+          <p>Paris, France</p>
+          <div class="button__side">
+            <button class="button__info" type="button" name="button"><i class="fab fa-github"></i></button>
+            <button class="button__info" type="button" name="button"><i class="fab fa-linkedin-in"></i></button>
+            <button class="button__info" type="button" name="button"><i class="fab fa-instagram"></i></button>
+            <button class="button__info" type="button" name="button"><i class="fab fa-youtube"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="top__bar">
+      <div id="logo__animation"></div>
+      <div id="menu__button"></div>
+    </div>
+    {% block app_content %}
+    {% endblock %}
+    <script type="text/javascript" src="{% static 'js/lottie.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/menu.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/animations.js' %}"></script>
+  </body>
+</html>

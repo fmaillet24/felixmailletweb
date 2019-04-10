@@ -1,0 +1,281 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block app_content %}
+
+<div class="content">
+  <div class="title__over">
+    <div class="title__center">
+      <h1>FELIX MAILLET</h1>
+      <span id="typed"></span>
+    </div>
+  </div>
+  <div id="circle__animation"></div>
+  <div class="bottom__bar">
+    <p id="bottom__bar__title">ABOUT ME</p>
+    <img src="{% static 'img/SVG/mouse.svg' %}" alt="mouse">
+    <p id="bottom__bar__title">SCROLL DOWN</p>
+  </div>
+</div>
+
+<div class="content">
+  <h3 id="title__right">ABOUT ME</h3>
+  <div class="left__side portrait">
+    <img class="portrait__size" src="{% static 'img/portrait.jpg'%}" alt="portrait">
+  </div>
+  <div class="right__side" data-aos="fade-up" data-aos-duration="1000">
+    <div class="text__side">
+      <p>Jeune optimiste avec le desir de comprendre et d’apprendre. Ancien sportif ayant trouve dans l’informatique un nouveau defi qui combine des performances mentales et physiques.</p>
+    </div>
+    <div class="info__side">
+      <div class="element__info">
+        <p><i class="fas fa-user"></i>Felix Maillet</p>
+      </div>
+      <div class="element__info">
+        <p><i class="fas fa-table"></i>23 Decembre 1994</p>
+      </div>
+      <div class="element__info">
+        <p><i class="fas fa-location-arrow"></i>Paris, France</p>
+      </div>
+      <div class="element__info">
+        <p><i class="fas fa-envelope-open"></i>felixmaillet@yahoo.fr</p>
+      </div>
+    </div>
+    <div class="button__side">
+      <button class="button__info" type="button" name="button"><i class="fab fa-github"></i></button>
+      <button class="button__info" type="button" name="button"><i class="fab fa-linkedin-in"></i></button>
+      <button class="button__info" type="button" name="button"><i class="fab fa-instagram"></i></button>
+      <button class="button__info" type="button" name="button"><i class="fab fa-youtube"></i></button>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div id="competences__target" class="left__side">
+    <h4 id="title__left">SKILLS</h4>
+    <div class="all__competences">
+      <h5>LANGUAGES</h5>
+
+      <div class="add__competences__progress">
+        <p>FRENCH</p>
+        <div class="border__bar">
+          <div class="progress__bar french"></div>
+        </div>
+      </div>
+
+      <div class="add__competences__progress">
+        <p>ENGLISH</p>
+        <div class="border__bar">
+          <div class="progress__bar english"></div>
+        </div>
+      </div>
+
+      <h5>IT</h5>
+
+      <div class="add__competences__progress">
+        <p>PYTHON</p>
+        <div class="border__bar">
+          <div class="progress__bar python"></div>
+        </div>
+      </div>
+
+      <div class="add__competences__progress">
+        <p>JS</p>
+        <div class="border__bar">
+          <div class="progress__bar js"></div>
+        </div>
+      </div>
+
+      <div class="add__competences__progress">
+        <p>C</p>
+        <div class="border__bar">
+          <div class="progress__bar c_language"></div>
+        </div>
+      </div>
+
+      <div class="add__competences__progress">
+        <p>HTML/CSS</p>
+        <div class="border__bar">
+          <div class="progress__bar html_css"></div>
+        </div>
+      </div>
+
+      <h5>ADOBE</h5>
+
+      <div class="add__competences__progress">
+        <p>PREMIERE PRO</p>
+        <div class="border__bar">
+          <div class="progress__bar premiere_pro"></div>
+        </div>
+      </div>
+
+      <div class="add__competences__progress">
+        <p>AFTER EFFECTS</p>
+        <div class="border__bar">
+          <div class="progress__bar after_effects"></div>
+        </div>
+      </div>
+
+      <div class="add__competences__progress">
+        <p>LIGHTROOM</p>
+        <div class="border__bar">
+          <div class="progress__bar lightroom"></div>
+        </div>
+      </div>
+
+      <div class="add__competences__progress">
+        <p>ILLUSTRATOR</p>
+        <div class="border__bar">
+          <div class="progress__bar illustrator"></div>
+        </div>
+      </div>
+
+      <div class="add__competences__progress">
+        <p>PHOTOSHOP</p>
+        <div class="border__bar">
+          <div class="progress__bar photoshop"></div>
+        </div>
+      </div>
+
+      <div class="add__competences__progress">
+        <p>XD</p>
+        <div class="border__bar">
+          <div class="progress__bar xd_rate"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="right__side illustration">
+    <img id="right_skills" src="{% static 'img/SVG/right_skills.svg' %}" alt="">
+  </div>
+</div>
+
+<div class="content">
+  <h3 id="education__left">EDUCATION</h3>
+  <h4 id="experience__right">EXPERIENCE</h4>
+  <div class="education__experience">
+    <button id="education__left__button" type="button" name="button"><i id="education__logo"class="fas fa-graduation-cap"></i>EDUCATION</button>
+    <button id="education__right__button" type="button" name="button"><i id="experience__logo" class="fas fa-suitcase"></i>EXPERIENCE</button>
+  </div>
+  <div class="education">
+    <div class="education__lines">
+      <div class="circle__left"></div>
+      <p class="title__education" id="align__right">PYTHON DEVELOPER @OPENCLASSROOMS</p>
+      <p class="date__education" id="align__right">January 2018 - January 2019</p>
+      <p id="description__education">Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor incid idunt ut labore et.</p>
+    </div>
+    <div class="education__lines">
+      <div class="circle__left"></div>
+      <p class="title__education" id="align__right">DEVELOPER @EPITECH</p>
+      <p class="date__education" id="align__right">March 2017 - December 2017</p>
+      <p id="description__education">Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor incid idunt ut labore et.</p>
+    </div>
+    <div class="education__lines">
+      <div class="circle__left"></div>
+      <p class="title__education" id="align__right">PISCINE @ECOLE42</p>
+      <p class="date__education" id="align__right">July 2016</p>
+      <p id="description__education">Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor incid idunt ut labore et.</p>
+    </div>
+    <div class="education__lines">
+      <div class="circle__left"></div>
+      <p class="title__education" id="align__right">FFSA ACADEMY</p>
+      <p class="date__education" id="align__right">October 2014 - November 2015</p>
+      <p id="description__education">Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor incid idunt ut labore et.</p>
+    </div>
+    <div class="education__lines">
+      <div class="circle__left"></div>
+      <p class="title__education" id="align__right">BAC - ES(Maths)</p>
+      <p class="date__education" id="align__right">July 2013</p>
+      <p id="description__education">Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor incid idunt ut labore et.</p>
+    </div>
+  </div>
+
+  <div class="experience">
+    <div class="education__lines">
+      <div class="circle__left"></div>
+      <p class="title__education" id="align__right">DRONISTE @FRAMES DEALER</p>
+      <p class="date__education" id="align__right">AVRIL 2019</p>
+      <p id="description__education">Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor incid idunt ut labore et.</p>
+    </div>
+    <div class="education__lines">
+      <div class="circle__left"></div>
+      <p class="title__education" id="align__right">MONTEUR @FREELANCE</p>
+      <p class="date__education" id="align__right">JUILLET 2016 - Novembre 2017</p>
+      <p id="description__education">Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor incid idunt ut labore et.</p>
+    </div>
+    <div class="education__lines">
+      <div class="circle__left"></div>
+      <p class="title__education" id="align__right">PILOTE @WINTEC RACING</p>
+      <p class="date__education" id="align__right">Janvier 2007 - Novembre 2015</p>
+      <p id="description__education">Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor incid idunt ut labore et.</p>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <p id="service__title">SERVICES</p>
+  <div class="services">
+    <div class="services__box border__one">
+      <p><i class="fab fa-sketch"></i></p>
+      <p>WEB DESIGN</p>
+      <p>Réalisation de design sur mesure.</p>
+    </div>
+    <div class="services__box border__two">
+      <p><i class="fas fa-file-code"></i></p>
+      <p>WEB DEVELOPMENT</p>
+      <p>De la conception de la base de donnees au visuel.</p>
+    </div>
+    <div class="services__box border__three">
+      <p><i class="fas fa-cogs"></i></p>
+      <p>WEB ANIMATION</p>
+      <p>Réalistion d'animation web sur mesure.</p>
+    </div>
+    <div class="services__box border__four">
+      <p><i class="fab fa-python"></i></p>
+      <p>PYTHON DEVELOPMENT</p>
+      <p>Du developpement web au developpement en interface utilisateur.</p>
+    </div>
+    <div class="services__box border__five">
+      <p><i class="fas fa-helicopter"></i></p>
+      <p>AERIAL CONTENT</p>
+      <p>Réalisation de contenu multimédia aérien, photos et vidéos.</p>
+    </div>
+    <div class="services__box border__six">
+      <p><i class="fas fa-exclamation-triangle"></i></p>
+      <p>PROBLEM SOLVING</p>
+      <p>Vous avez un problème avec votre site ou encore avec un programme qui ne fonctionne plus? Contactez moi.</p>
+    </div>
+  </div>
+</div>
+
+<div class="content message">
+  <div class="left__side">
+    <form class="form__message" method="post">
+    {% csrf_token %}
+    {% load widget_tweaks %}
+    {{ form.nom|add_class:"form__nom"|attr:"placeholder:Nom" }}
+    {{ form.email|add_class:"form__email"|attr:"placeholder:Email" }}
+    {{ form.message|add_class:"form__text"|attr:"placeholder:Message"|attr:"rows:4" }}
+    <button class="form__button" type="submit" name="submit">ENVOYER MESSAGE</button>
+  </form>
+  </div>
+  <div class="right__side">
+    <div class="availibility">
+      <h2>STATUS FREELANCE:</h2>
+      <p id="disponible">DISPONIBLE</p>
+      <h2>EMAIL:</h2>
+      <p>felixmaillet@yahoo.fr</p>
+      <h2>LOCALISATION:</h2>
+      <p>PARIS, FRANCE</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+<script type="text/javascript" src="{% static 'js/writing.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/competences.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/education.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/aos.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/initAos.js' %}"></script>
+
+{% endblock %}
