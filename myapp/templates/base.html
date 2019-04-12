@@ -24,37 +24,27 @@
     <title>Félix Maillet</title>
   </head>
   <body>
-    <div id="menu">
-      <div class="left__menu">
-        <div class="menu__link">
-          <ul>
-            <li>PYTHON/WEB</li>
-            <li>DRONE</li>
-            <li>ANIMATION</li>
-          </ul>
-        </div>
-      </div>
-      <div class="right__menu">
-        <div class="contact__link">
-          <p>felixmaillet@yahoo.fr</p>
-          <p>Paris, France</p>
-          <div class="button__side">
-            <button class="button__info" type="button" name="button"><i class="fab fa-github"></i></button>
-            <button class="button__info" type="button" name="button"><i class="fab fa-linkedin-in"></i></button>
-            <button class="button__info" type="button" name="button"><i class="fab fa-instagram"></i></button>
-            <button class="button__info" type="button" name="button"><i class="fab fa-youtube"></i></button>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="top__bar">
       <div id="logo__animation"></div>
-      <div id="menu__button"></div>
+      <div class="menu_text">
+        <span id="title_text">MENU</span><span id="open_text">OPEN</span>
+        <div id="menu__button"></div>
+      </div>
     </div>
-    {% block app_content %}
+    <div id="menu__animation"></div>
+    <div id="menu">
+      <ul>
+        <li><a href="{% url 'index'%}">HOME</a></li>
+        <li><a href="{% url 'about'%}">ABOUT</a></li>
+        <li><a href="{% url 'python'%}">CODING</a></li>
+        <li><a href="{% url 'drone'%}">DRONE</a></li>
+        <li><a href="{% url 'animation'%}">ANIMATION</a></li>
+        <li><a href="{% url 'contact'%}">CONTACT</a></li>
+      </ul>
+    </div>
+    {% block content %}
     {% endblock %}
     <script type="text/javascript" src="{% static 'js/lottie.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/menu.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/animations.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/animation-base.js'%}"></script>
   </body>
 </html>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="content__contact">
+  <h1 id="message__align">Contactez-moi.</h1>
+  <p id="message__align">Vous avez envie de travailler avec moi? Vous pouvez me contacter par mail: felixmaillet@yahoo.fr, ou m'envoyer directement un message ici.</p>
+  <form class="form__message" method="post">
+  {% csrf_token %}
+  {% load widget_tweaks %}
+  {{ form.nom|add_class:"form__nom"|attr:"placeholder:Votre nom" }}
+  {{ form.email|add_class:"form__email"|attr:"placeholder:Votre email" }}
+  {{ form.message|add_class:"form__text"|attr:"placeholder:Votre Message"|attr:"rows:4" }}
+  <button class="form__button" type="submit" name="submit">ENVOYER MON MESSAGE</button>
+  </form>
+</div>
+{% endblock %}

@@ -23,7 +23,3 @@ function animCompetence(element, position){
 
   }
 }
-
-function scrollIndicator(){
-
-}

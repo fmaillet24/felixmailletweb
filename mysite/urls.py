@@ -21,7 +21,9 @@ from myapp import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name="index"),
+    url(r'^about/$', views.about, name="about"),
     url(r'^drone/$', views.drone, name="drone"),
     url(r'^animation/$', views.animation, name="animation"),
     url(r'^python/$', views.python, name="python"),
+    url(r'^contact/$', views.contact, name="contact"),
 ]
