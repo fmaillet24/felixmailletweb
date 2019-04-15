@@ -1,3 +1,10 @@
+/*
+colors:
+gris #1f1f1f
+white
+black
+*/
+
 @font-face {
   font-family: 'Mont-Bold';
   src: url('../fonts/Montserrat-Bold.ttf');
@@ -14,6 +21,14 @@
   font-family: 'bebas';
   src: url('../fonts/bebas.ttf');
 }
+@font-face{
+  font-family: 'Poiret';
+  src: url('../fonts/PoiretOne.ttf');
+}
+@font-face{
+  font-family: 'Paytone';
+  src: url('../fonts/PaytoneOne.ttf');
+}
 
 body{
   margin: 0;
@@ -26,7 +41,7 @@ h1{
 }
 
 h2{
-  font-family: 'Mont-Bold';
+  font-family: 'Paytone';
   font-size: 30px;
   letter-spacing: 5px;
   color: white;
@@ -47,7 +62,7 @@ h4{
 }
 
 h5{
-  font-family: 'Mont-Light';
+  font-family: 'Poiret';
   font-size: 15px;
   letter-spacing: 2px;
   color: white;
@@ -109,19 +124,26 @@ h5{
   list-style: none;
   text-align: center;
   padding: 0;
+  position: relative;
+  z-index: 999;
 }
 
-#menu ul li a{
+#menu ul li{
+  margin: 10px;
+}
+
+.menu__btn{
   font-family: 'bebas';
   font-size: 50px;
   margin: 20px;
   cursor: pointer;
-  color: white;
+  color: grey;
   text-decoration: none;
+  letter-spacing: 6px;
 }
 
-#menu ul li a:hover{
-  color: grey;
+.active, .menu__btn:hover{
+  color: white;
 }
 
 .content{
@@ -479,10 +501,13 @@ div.menu_text:hover span#open_text {
 .last__work__title{
   width: 100vw;
   height: 50vh;
-  background-color: black;
+  background-color: #1f1f1f;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0px 0px 10px 3px #1f1f1f;
 }
 
 .last__work__content{
@@ -500,7 +525,7 @@ div.menu_text:hover span#open_text {
 
 .right__display{
   flex:90%;
-  background-image: url('../img/SVG/right_skills.svg');
+  background-image: url('../img/SVG/lespoteauxmak.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -626,7 +651,7 @@ div.menu_text:hover span#open_text {
 .index__footer{
   width: 100vw;
   height: 30vh;
-  background-color: black;
+  background-color: #1f1f1f;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -653,26 +678,108 @@ div.menu_text:hover span#open_text {
   font-family: 'Mont-Light';
 }
 
+.coding__white{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-image: url('../img/SVG/background.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.coding__grey{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background-image: url('../img/SVG/test2.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.left__python{
+  flex: 50%;
+  width: 50%;
+  height: 100%;
+}
+
+.right__python{
+  flex: 50%;
+  width: 50%;
+  height: 100%;
+}
+
+.number__bar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.white__bar{
+  height: 2px;
+  width: 40px;
+  background-color: black;
+}
+
+.number{
+  margin-left: 10px;
+}
+
+.drone__row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 4px;
+  margin-top: 150px;
+}
+
+.drone__column{
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.drone__column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
 
 /********* MOBILE **********/
 @media (max-width: 768px) {
 
-  body{
-    overflow-x: hidden;
+  h2{
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-left: 6px;
+  }
+
+  h5{
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-left: 12px;
+  }
+  h3{
+    font-size: 18px;
+    letter-spacing: 3px;
   }
 
   .social__link{
     position: absolute;
     bottom: 0;
     top: unset;
+    transform: unset;
   }
 
   #circle__animation{
     position: absolute;
     top: 50%;
-    right: -100%;
+    right: 0;
     transform: translateY(-50%);
-    height: 50%;
+    height: 60%;
   }
 
   .left__side{
@@ -685,12 +792,13 @@ div.menu_text:hover span#open_text {
   }
 
   h1{
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 2px;
+    text-decoration: line-through;
   }
 
   span{
-    font-size: 12px;
+    font-size: 8px;
     letter-spacing: 2px;
   }
 
@@ -844,10 +952,49 @@ div.menu_text:hover span#open_text {
   }
 
   .content__service{
-    height: 80vh;
+    height: auto;
   }
 
   .white__border{
     display: none;
   }
+
+  .last__work__title{
+    height: 30vh;
+  }
+
+  .tello__description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tello__description h3{
+    margin-left: 8px;
+  }
+
+  .tello__description h5{
+    color: black;
+  }
+
+  .car__description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .car__description h3{
+    justify-content: flex-start;
+    margin-left: 8px;
+  }
+
+  .car__description h5{
+    color: black;
+  }
+
+  .drone__column{
+    flex: 100%;
+    max-width: 100%;
+  }
+
 }

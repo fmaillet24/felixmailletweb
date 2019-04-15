@@ -1,10 +1,20 @@
-var animation_circle = lottie.loadAnimation({
-  container: document.getElementById('circle__animation'),
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  path: '/static/circle.json'
-})
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+  var animation_circle = lottie.loadAnimation({
+    container: document.getElementById('circle__animation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/static/circleMobile.json'
+  })
+} else {
+  var animation_circle = lottie.loadAnimation({
+    container: document.getElementById('circle__animation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/static/circle.json'
+  })
+}
 
 var animation_burger = lottie.loadAnimation({
   container: document.getElementById('menu__button'),
@@ -77,3 +87,14 @@ animation_menu.addEventListener('complete', function(){
     animateMenu.style.display = 'none';
   }
 })
+
+var btnContainer = document.getElementById("menu");
+var btns = btnContainer.getElementsByClassName("menu__btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    console.log('cliiique');
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}

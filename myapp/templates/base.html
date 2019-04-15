@@ -34,12 +34,12 @@
     <div id="menu__animation"></div>
     <div id="menu">
       <ul>
-        <li><a href="{% url 'index'%}">HOME</a></li>
-        <li><a href="{% url 'about'%}">ABOUT</a></li>
-        <li><a href="{% url 'python'%}">CODING</a></li>
-        <li><a href="{% url 'drone'%}">DRONE</a></li>
-        <li><a href="{% url 'animation'%}">ANIMATION</a></li>
-        <li><a href="{% url 'contact'%}">CONTACT</a></li>
+        <li><a {% if request.path == '/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="{% url 'index'%}">HOME</a></li>
+        <li><a {% if request.path == '/about/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="{% url 'about'%}">ABOUT</a></li>
+        <li><a {% if request.path == '/python/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="{% url 'python'%}">CODING</a></li>
+        <li><a {% if request.path == '/drone/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="{% url 'drone'%}">DRONE</a></li>
+        <li><a {% if request.path == '/animation/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="{% url 'animation'%}">ANIMATION</a></li>
+        <li><a {% if request.path == '/contact/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="{% url 'contact'%}">CONTACT</a></li>
       </ul>
     </div>
     {% block content %}
