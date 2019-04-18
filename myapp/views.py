@@ -15,6 +15,12 @@ def about(request):
 def drone(request):
     return render(request, 'drone.html')
 
+def photo(request):
+    return render(request, 'photo.html')
+
+def video(request):
+    return render(request, 'video.html')
+
 def animation(request):
     return render(request, 'animation.html')
 

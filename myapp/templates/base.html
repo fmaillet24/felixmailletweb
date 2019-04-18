@@ -34,12 +34,13 @@
     <div id="menu__animation"></div>
     <div id="menu">
       <ul>
-        <li><a {% if request.path == '/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="{% url 'index'%}">HOME</a></li>
-        <li><a {% if request.path == '/about/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="{% url 'about'%}">ABOUT</a></li>
-        <li><a {% if request.path == '/python/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="{% url 'python'%}">CODING</a></li>
-        <li><a {% if request.path == '/drone/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="{% url 'drone'%}">DRONE</a></li>
-        <li><a {% if request.path == '/animation/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="{% url 'animation'%}">ANIMATION</a></li>
-        <li><a {% if request.path == '/contact/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="{% url 'contact'%}">CONTACT</a></li>
+        <li><a id="home" {% if request.path == '/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="">HOME</a></li>
+        <li><a id="about" {% if request.path == '/about/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="">ABOUT</a></li>
+        <li><a id="coding" {% if request.path == '/python/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="">CODING</a></li>
+        <li><a id="drone" {% if request.path == '/drone/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="">DRONE</a></li>
+        <li><a id="animation" {% if request.path == '/animation/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="">ANIMATION</a></li>
+        <li><a id="contact" {% if request.path == '/contact/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="">CONTACT</a></li>
+        <button id="redirect" type="button" name="button">REDIRECT</button>
       </ul>
     </div>
     {% block content %}

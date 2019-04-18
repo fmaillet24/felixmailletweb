@@ -703,12 +703,18 @@ div.menu_text:hover span#open_text {
   flex: 50%;
   width: 50%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .right__python{
   flex: 50%;
   width: 50%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .number__bar{
@@ -725,6 +731,28 @@ div.menu_text:hover span#open_text {
 
 .number{
   margin-left: 10px;
+}
+
+.left__python img{
+  width: 60%;
+  margin-left: auto;
+}
+
+.project__title{
+  margin-left: 40px;
+}
+
+.project__description{
+  margin-left: 40px;
+  width: 80%;
+}
+
+.project__tech{
+  margin-left: 40px;
+}
+
+.project__link{
+  margin-left: 40px;
 }
 
 .drone__row{
@@ -745,6 +773,22 @@ div.menu_text:hover span#open_text {
   margin-top: 8px;
   vertical-align: middle;
   max-width: 100%;
+}
+
+#loader{
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  transition: 0.8s;
+}
+
+#redirect{
+  position: absolute;
+  z-index: 9999;
 }
 
 
@@ -997,4 +1041,34 @@ div.menu_text:hover span#open_text {
     max-width: 100%;
   }
 
+  .coding__white{
+    display: block;
+  }
+
+  .coding__grey{
+    display: block;
+  }
+
+  .left__python{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .left__python img{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .right__python{
+    width: 100%;
+    height: 50%;
+  }
+
+  #display__video__toit iframe{
+    width: 100%;
+
+  }
 }
