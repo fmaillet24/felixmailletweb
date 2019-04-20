@@ -97,3 +97,57 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+var homeButton = document.getElementById('home');
+homeButton.addEventListener('click', function(){
+  var loader = document.getElementById('loader');
+  loader.style.width = '100%';
+  setTimeout(function(){
+    window.location.href = '/';
+  }, 1000);
+});
+
+var aboutButton = document.getElementById('about');
+aboutButton.addEventListener('click', function(){
+  var loader = document.getElementById('loader');
+  loader.style.width = '100%';
+  setTimeout(function(){
+    window.location.href = '/about/';
+  }, 1000);
+});
+
+var codingButton = document.getElementById('coding');
+codingButton.addEventListener('click', function(){
+  var loader = document.getElementById('loader');
+  loader.style.width = '100%';
+  setTimeout(function(){
+    window.location.href = '/python/';
+  }, 1000);
+});
+
+var droneButton = document.getElementById('drone');
+droneButton.addEventListener('click', function(){
+  var loader = document.getElementById('loader');
+  loader.style.width = '100%';
+  setTimeout(function(){
+    window.location.href = '/drone/';
+  }, 1000);
+});
+
+var animationButton = document.getElementById('animation');
+animationButton.addEventListener('click', function(){
+  var loader = document.getElementById('loader');
+  loader.style.width = '100%';
+  setTimeout(function(){
+    window.location.href = '/animation/';
+  }, 1000);
+});
+
+var contactButton = document.getElementById('contact');
+contactButton.addEventListener('click', function(){
+  var loader = document.getElementById('loader');
+  loader.style.width = '100%';
+  setTimeout(function(){
+    window.location.href = '/contact/';
+  }, 1000);
+});

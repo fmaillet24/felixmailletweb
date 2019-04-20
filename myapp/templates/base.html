@@ -33,19 +33,17 @@
     </div>
     <div id="menu__animation"></div>
     <div id="menu">
-      <ul>
-        <li><a id="home" {% if request.path == '/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="">HOME</a></li>
-        <li><a id="about" {% if request.path == '/about/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="">ABOUT</a></li>
-        <li><a id="coding" {% if request.path == '/python/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="">CODING</a></li>
-        <li><a id="drone" {% if request.path == '/drone/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="">DRONE</a></li>
-        <li><a id="animation" {% if request.path == '/animation/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="">ANIMATION</a></li>
-        <li><a id="contact" {% if request.path == '/contact/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} href="">CONTACT</a></li>
-        <button id="redirect" type="button" name="button">REDIRECT</button>
-      </ul>
+      <button id="home" {% if request.path == '/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} type="button" name="button">HOME</button>
+      <button id="about" {% if request.path == '/about/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} type="button" name="button">ABOUT</button>
+      <button id="coding" {% if request.path == '/python/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} type="button" name="button">CODING</button>
+      <button id="drone" {% if request.path == '/drone/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} type="button" name="button">DRONE</button>
+      <button id="animation" {% if request.path == '/animation/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} type="button" name="button">ANIMATION</button>
+      <button id="contact" {% if request.path == '/contact/' %} class="menu__btn active" {% else %} class="menu__btn" {% endif %} type="button" name="button">CONTACT</button>
     </div>
     {% block content %}
     {% endblock %}
     <script type="text/javascript" src="{% static 'js/lottie.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/animation-base.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/loader.js'%}"></script>
   </body>
 </html>

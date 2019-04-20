@@ -3,38 +3,41 @@
 {% load static %}
 {% block content %}
 <div id="loader"></div>
-<div class="drone__row">
-  <div class="drone__column">
-    <img src="{% static 'img/drone_toit2.jpg' %}" alt="">
-    <img src="{% static 'img/ponton.jpg' %}" alt="">
-    <img src="{% static 'img/drone_toit2.jpg' %}" alt="">
-    <img src="{% static 'img/ponton.jpg' %}" alt="">
-    <img src="{% static 'img/drone_toit2.jpg' %}" alt="">
-    <img src="{% static 'img/ponton.jpg' %}" alt="">
+<div class="content__drone">
+  <div class="photo__box">
+    <div class="photo">
+      <img src="{% static 'img/drone_toit2.jpg'%}" alt="drone_toit">
+      <div id="photos" class="over__photo__left">
+        <p>PHOTOS</p>
+      </div>
+    </div>
   </div>
-  <div class="drone__column">
-    <img src="{% static 'img/ponton.jpg' %}" alt="">
-    <img src="{% static 'img/drone_toit2.jpg' %}" alt="">
-    <img src="{% static 'img/ponton.jpg' %}" alt="">
-    <img src="{% static 'img/drone_toit2.jpg' %}" alt="">
-    <img src="{% static 'img/ponton.jpg' %}" alt="">
-  </div>
-  <div class="drone__column">
-    <img src="{% static 'img/drone_toit2.jpg' %}" alt="">
-    <img src="{% static 'img/ponton.jpg' %}" alt="">
-    <img src="{% static 'img/drone_toit2.jpg' %}" alt="">
-    <img src="{% static 'img/ponton.jpg' %}" alt="">
-    <img src="{% static 'img/drone_toit2.jpg' %}" alt="">
-    <img src="{% static 'img/ponton.jpg' %}" alt="">
+  <div class="video__box">
+    <div class="photo__right">
+      <img src="{% static 'img/drone_toit2.jpg'%}" alt="drone_toit">
+      <div id="videos" class="over__photo__right">
+        <p>VIDEOS</p>
+      </div>
+    </div>
   </div>
 </div>
-
 <script type="text/javascript">
-  window.addEventListener('load', function(event){
-    console.log('toutes les ressourses sont chargees');
+  var photoButton = document.getElementById('photos');
+  photoButton.addEventListener('click', function(){
     var loader = document.getElementById('loader');
-    loader.style.width = '0';
+    loader.style.width = '100%';
+    setTimeout(function(){
+      window.location.href = '/drone/photo/' ;
+    }, 1000);
   })
 
+  var videoButton = document.getElementById('videos');
+  videoButton.addEventListener('click', function(){
+    var loader = document.getElementById('loader');
+    loader.style.width = '100%';
+    setTimeout(function(){
+      window.location.href = '/drone/video/' ;
+    }, 1000);
+  })
 </script>
 {% endblock %}
